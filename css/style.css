@@ -1,9 +1,173 @@
-.resimS
-{   
-    max-height: 550px;
-    max-width: 1300px;
-}
-body
+.navbar
 {
-    padding-top: 50px;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
+.ad
+{
+    font-style:italic;
+    color:#00FFC6;
+    padding-left: 20px;
+    width:1000px;
+    padding-top: 5px;
+}
+.nav-item
+{   
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.card-img-top
+{
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
+.hobi
+{
+    font-style:italic;
+    text-align: center;
+}
+.hbclr
+{
+    background-color: #DFDFDE;
+}
+.carousel-item
+{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    background-size: cover;
+}
+.carousel-item::before
+{
+    content:"" ;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.6;
+}
+.carousel-caption
+{
+    bottom: 180px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.carousel-caption h5
+{
+    font-size: 40px;
+    font-weight: 200;
+}
+.carousel-caption p
+{
+    font-size: 15px;
+    top: 2rem;
+}
+.trbtext
+{
+    padding: 30px;
+}
+/* From uiverse.io */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+ .trbcgr
+ {
+     padding: 20px;
+     background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+ }
+ .trbson
+ {
+     padding: 20px;
+    background-color: #0093E9;
+     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+     ;
+ }
