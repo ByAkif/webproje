@@ -1,30 +1,28 @@
 <?php
-    $JSON = json_decode(file_get_contents('https://api.genelpara.com/embed/doviz.json'), true);
-?>
-    <ul>
-        <li>
-            <span>USD</span>
-            <span>Fiyat: <?php echo $JSON['USD']['satis']; ?></span>
-            <span>Değişim: <?php echo $JSON['USD']['degisim']; ?></span>
-        </li>
-        <li>
-            <span>EUR</span>
-            <span>Fiyat: <?php echo $JSON['EUR']['satis']; ?></span>
-            <span>Değişim: <?php echo $JSON['EUR']['degisim']; ?></span>
-        </li>
-        <li>
-            <span>GBP</span>
-            <span>Fiyat: <?php echo $JSON['GBP']['satis']; ?></span>
-            <span>Değişim: <?php echo $JSON['GBP']['degisim']; ?></span>
-        </li>
-        <li>
-            <span>CHF</span>
-            <span>Fiyat: <?php echo $JSON['CHF']['satis']; ?></span>
-            <span>Değişim: <?php echo $JSON['CHF']['degisim']; ?></span>
-        </li>
-        <li>
-            <span>CAD</span>
-            <span>Fiyat: <?php echo $JSON['CAD']['satis']; ?></span>
-            <span>Değişim: <?php echo $JSON['CAD']['degisim']; ?></span>
-        </li>
-    </ul>
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://api.collectapi.com/sport/leaguesList",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "authorization: apikey your_token",
+    "content-type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
