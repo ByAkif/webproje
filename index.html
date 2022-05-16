@@ -123,9 +123,12 @@
         </div>
     </main>
 <section class="p-5 text-center iletisim" id="iletisim">
-        <div class="container">
-            <h2 class="mb-5 font-weight-bold">İletişim</h2>
-            <hr>
+    <div class="contact-banner">
+        <h1>ILETISIM</h1>
+        <p class="contact-description">
+          Bana Neler Söylemek istersiniz...
+        </p>
+      </div>
     <div class="container bg-white pt-5">
         <div class="row px-3 pb-2">
             <div class="col-sm-4 text-center mb-3">
@@ -144,36 +147,43 @@
                 <p>akif.balci@ogr.sakarya.edu.tr</p>
             </div>
         </div>
-        <div class="col-md-12 pb-5">
-            <div class="contact-form">
-                <div id="success"></div>
-                <form name="sentMessage" id="contactForm" novalidate="novalidate" action="gonder.php" method="post">
-                    <div class="control-group">
-                        <input 
-                        name="ad"
-                        type="text" class="form-control" id="Ad-Soyad" placeholder="Ad-Soyad" required="required" data-validation-required-message="Please enter your name" />
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="control-group">
-                        <input 
-                        name="email"
-                        type="email" class="form-control" id="email" placeholder="Email" required="required" data-validation-required-message="Please enter your email" />
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="control-group">
-                        <textarea
-                        name="mesaj" 
-                        class="form-control" rows="8" id="mesaj" placeholder="Mesajınız" required="required" data-validation-required-message="Please enter your message"></textarea>
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div>
-                        <button class="btn btn-primary" type="submit" id="Butongönder" value="gonder" form="contactForm">Gönder</button>
-                        <button class="btn btn-primary" type="reset" id="Temizle">Temizle</button>
-                    </div>
-                </form>
+          <form name="contact-form" action="iletisim.php" method="post">
+            <div class="form-control">
+              <label>Ad-Soyad</label>
+              <input name="name"
+                placeholder="İsim-Soyisim" />
+              <div class="error hide">İsim-Soyisim kısmı boş bırakılamaz</div>
             </div>
-        </div>
-    </div>
+      
+            <div class="form-control">
+              <label>Email</label>
+              <input
+                name="email"
+                placeholder="your_email@example.com"
+              />
+              <div class="error hide">Geçersiz E-mail</div>
+            </div>
+      
+            <div class="form-control">
+              <label>Telefon</label>
+              <input name="phone"
+              ></input>
+              <div class="error hide">Geçersiz Telefon</div>
+            </div>
+      
+            <div class="form-control">
+              <label>Mesajınız</label>
+              <textarea name="message"></textarea>
+              <div class="error hide">Mesaj kısmı boş bırakılamaz</div>
+            </div>
+      
+            <hr />
+      
+            <button type="submit">GONDER</button>
+            <button type="reset">
+                TEMIZLE
+            </button>
+          </form>
 </section>
     <!--Hobiler-->
 
@@ -189,6 +199,7 @@
         </div>
     </footer>
 
+    <script src="form.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
